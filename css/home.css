@@ -1735,3 +1735,8 @@ header {
             transform:scale(0);
   }
 }
+
+bg-img {
+    background: #e4f5fc;
+    background: radial-gradient(ellipse at top-left,  #e4f5fc 0%,#bfe8f9 40%,#9fd8ef 71%,#2ab0ed 100%);
+}
