@@ -1743,5 +1743,5 @@ header {
 
 .bg-img {
 	background: #13c5c5;
-	background: radial-gradient(circle at top left, #13c5c5 30%, #a3fffa 100%);
+	background: radial-gradient(circle at top left, #13c5c5 10%, #a3fffa 100%);
 }
