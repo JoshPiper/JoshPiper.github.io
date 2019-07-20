@@ -1,1 +1,82 @@
-image: alpine:lateststages:  - deploybefore_script:  - apk update  - which ssh-agent || apk add openssh-client  - which rsync || apk add rsync  - eval $(ssh-agent -s)  - echo $SSH_AGENT_PID > /tmp/agent-${CI_JOB_ID}  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null  - ls ~/.ssh || mkdir ~/.ssh  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts  - chmod 644 ~/.ssh/known_hostsafter_script:  - SSH_AGENT_PID=$(cat /tmp/agent-${CI_JOB_ID}) ssh-agent -k.deploy: &define_deploy  stage: deploy  script:    - scp $FTP_USER@$FTP_HOST:~/env/doctor-intersite .env || touch .env    - ssh $FTP_USER@$FTP_HOST "ls ~/$FTP_DIR/ || mkdir ~/$FTP_DIR/"    - cat excludes.txt || (printf "excludes.txt\n.git" > excludes.txt)    - rsync -zrSlhaO --chmod=D2775,F664 --exclude-from excludes.txt --delete-after . $FTP_USER@$FTP_HOST:~/$FTP_DIR/#    - ssh $FTP_USER@$FTP_HOST "cd ~/$FTP_DIR/ && composer install".stop: &define_stop  stage: deploy  script:    - ssh $FTP_USER@$FTP_HOST "rm -r ~/$FTP_DIR"  when:    manualdeploy-master:  <<: *define_deploy  variables:    FTP_DIR: internet  environment:    name: production    url: https://doctor-internet.dev    on_stop: stop-master  only:    - masterstop-master:  stage: deploy  when: manual  script:    - ssh $FTP_USER@$FTP_HOST "rm -r ~/$FTP_DIR/*"    - ssh $FTP_USER@$FTP_HOST "echo '<?php http_response_code(503) ?>' > ~/$FTP_DIR/index.php"  variables:    FTP_DIR: internet    GIT_STRATEGY: none  only:    - master  environment:    name: production    action: stopdeploy-staging:  <<: *define_deploy  variables:    FTP_DIR: internet-staging/$CI_COMMIT_REF_SLUG  except:    - master  environment:    name: $CI_COMMIT_REF_SLUG    url: https://staging.doctor-internet.dev/$CI_COMMIT_REF_SLUG    on_stop: stop-stagingstop-staging:  <<: *define_stop  variables:    FTP_DIR: internet-staging/$CI_COMMIT_REF_SLUG    GIT_STRATEGY: none  except:    - master  environment:    name: $CI_COMMIT_REF_SLUG    action: stop
+image: alpine:latest
+
+stages:
+  - deploy
+
+before_script:
+  - apk update
+  - which ssh-agent || apk add openssh-client
+  - which rsync || apk add rsync
+  - eval $(ssh-agent -s)
+  - echo $SSH_AGENT_PID > /tmp/agent-${CI_JOB_ID}
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - ls ~/.ssh || mkdir ~/.ssh
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+
+after_script:
+  - SSH_AGENT_PID=$(cat /tmp/agent-${CI_JOB_ID}) ssh-agent -k
+
+.deploy: &define_deploy
+  stage: deploy
+  script:
+    - scp $FTP_USER@$FTP_HOST:~/env/doctor-intersite .env || touch .env
+    - ssh $FTP_USER@$FTP_HOST "ls ~/$FTP_DIR/ || mkdir ~/$FTP_DIR/"
+    - cat excludes.txt || (printf "excludes.txt\n.git" > excludes.txt)
+    - rsync -zrSlhaO --chmod=D2775,F664 --exclude-from excludes.txt --delete-after . $FTP_USER@$FTP_HOST:~/$FTP_DIR/
+#    - ssh $FTP_USER@$FTP_HOST "cd ~/$FTP_DIR/ && composer install"
+
+.stop: &define_stop
+  stage: deploy
+  script:
+    - ssh $FTP_USER@$FTP_HOST "rm -r ~/$FTP_DIR"
+  when:
+    manual
+
+deploy-master:
+  <<: *define_deploy
+  variables:
+    FTP_DIR: internet
+  environment:
+    name: production
+    url: https://doctor-internet.dev
+    on_stop: stop-master
+  only:
+    - master
+
+stop-master:
+  stage: deploy
+  when: manual
+  script:
+    - ssh $FTP_USER@$FTP_HOST "rm -r ~/$FTP_DIR/*"
+    - ssh $FTP_USER@$FTP_HOST "echo '<?php http_response_code(503) ?>' > ~/$FTP_DIR/index.php"
+  variables:
+    FTP_DIR: internet
+    GIT_STRATEGY: none
+  only:
+    - master
+  environment:
+    name: production
+    action: stop
+
+deploy-staging:
+  <<: *define_deploy
+  variables:
+    FTP_DIR: internet-staging/$CI_COMMIT_REF_SLUG
+  except:
+    - master
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    url: https://staging.doctor-internet.dev/$CI_COMMIT_REF_SLUG
+    on_stop: stop-staging
+
+stop-staging:
+  <<: *define_stop
+  variables:
+    FTP_DIR: internet-staging/$CI_COMMIT_REF_SLUG
+    GIT_STRATEGY: none
+  except:
+    - master
+  environment:
+    name: $CI_COMMIT_REF_SLUG
+    action: stop
