@@ -46,10 +46,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="home-content">
-								<h1 class="white-text">L² Plates</h1>
-								<h2 class="white-text">The Perfect Plate System</h2>
-								<a class="btn btn-light" href="https://www.gmodstore.com/market/view/4943">Buy Now!</a>
-								<a class="btn btn-info" href="#info" onclick="event.preventDefault(); $('#info')[0].scrollIntoView({behavior: 'smooth', block: 'start'});">Learn More</a>
+								<h1 class="white-text">Doctor Internet</h1>
+								<h2 class="white-text" id="typed"></h2>
+								<span id="typed-strings">
+									<p>I am a Lua Developer.</p>
+									<p>I am a Node Developer.</p>
+									<p>I am a PHP Developer.</p>
+									<p>I am a JavaScript Developer.</p>
+									<p>I am a DevOps Engineer.</p>
+									<p>I am a Team Leader.</p>
+									<p>I am a Systems Administrator.</p>
+									<p>I am a Community Moderator.</p>
+									<p>I am a Data Protection Officer.</p>
+									<p>I am ^1000 Doctor Internet.</p>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -383,4 +393,13 @@
 
 		<div id="back-to-top" style="display: none;"></div>
 	</body>
+
+	<script>
+		let typed = new Typed("#typed", {
+			stringsElement: "#typed-strings",
+			smartBackspace: true,
+			typeSpeed: 50,
+			backSpeed: 20
+		})
+	</script>
 </html>
