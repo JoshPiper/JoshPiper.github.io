@@ -579,8 +579,8 @@ header {
 
 .home-content h1 {
 	text-transform: uppercase;
-	text-align: left;
 }
+
 .home-content button {
 	margin-top: 20px;
 }
@@ -602,6 +602,10 @@ header {
 
 .breadcrumb>li+li:before {
 	color: #868F9B;
+}
+
+.home-content .white-text {
+	text-align: left;
 }
 
 
