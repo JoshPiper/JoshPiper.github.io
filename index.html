@@ -191,6 +191,13 @@
 			</div>
 		</footer>
 
+		<div id="modal-media" class="modal">
+			<span class="close cursor" onclick="mediaModalClose()">&times;</span>
+			<div class="modal-content">
+				<img src="img/logo.webp">
+			</div>
+		</div>
+
 		<div id="back-to-top" style="display: none;"></div>
 	</body>
 
@@ -213,6 +220,28 @@
 				hdr.fadeOut(2000, () => {
 					sub.css("margin-top", 0)
 				})
+			}
+		})
+	</script>
+	<script>
+		function mediaModal(src){
+			let box = $("#modal-media")
+			box.css("display", "block")
+			if (src !== undefined){
+				box.find("img").attr("src", src)
+			}
+		}
+		function mediaModalClose(){
+			$("#modal-media").css("display", "none")
+		}
+		$("a.lightbox").click(evt => {
+			evt.preventDefault()
+			mediaModal($(evt.currentTarget).attr("href"))
+		})
+		$(document).keyup(evt => {
+			let code = evt.keyCode ? evt.keyCode : evt.which
+			if (code === 27){
+				mediaModalClose()
 			}
 		})
 	</script>
