@@ -1798,3 +1798,8 @@ header {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+.white-text a {
+	color: #FFF;
+	text-decoration: underline;
+}
