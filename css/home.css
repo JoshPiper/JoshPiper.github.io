@@ -1755,6 +1755,7 @@ header {
 	position: fixed;
 	z-index: 1;
 	padding-top: 100px;
+	padding-bottom: 20px;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -1770,6 +1771,8 @@ header {
 	display: block;
 	width: 80%;
 	max-width: 700px;
+	background: none;
+	height: max-content;
 }
 
 .modal-content img {
