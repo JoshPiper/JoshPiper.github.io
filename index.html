@@ -234,9 +234,15 @@
 		function mediaModalClose(){
 			$("#modal-media").css("display", "none")
 		}
-		$("a.lightbox").click((evt) => {
+		$("a.lightbox").click(evt => {
 			evt.preventDefault()
 			mediaModal($(evt.currentTarget).attr("href"))
+		})
+		$(document).keypress(evt => {
+			let code = evt.keyCode ? evt.keyCode : evt.which
+			if (code === 27){
+				mediaModalClose()
+			}
 		})
 	</script>
 </html>
