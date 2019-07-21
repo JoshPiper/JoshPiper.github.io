@@ -224,14 +224,19 @@
 		})
 	</script>
 	<script>
-		// Open the Modal
-		function openModal() {
-			$("#modal-media").css("display", "block")
+		function mediaModal(src){
+			let box = $("#modal-media")
+			box.css("display", "block")
+			if (src !== undefined){
+				box.find("img").attr("src", src)
+			}
 		}
-
-		// Close the Modal
-		function closeModal() {
+		function mediaModalClose(){
 			$("#modal-media").css("display", "none")
 		}
+		$("a.lightbox").click((evt) => {
+			evt.preventDefault()
+			mediaModal($(evt.currentTarget).attr("href"))
+		})
 	</script>
 </html>
