@@ -238,7 +238,7 @@
 			evt.preventDefault()
 			mediaModal($(evt.currentTarget).attr("href"))
 		})
-		$(document).keypress(evt => {
+		$(document).keyup(evt => {
 			let code = evt.keyCode ? evt.keyCode : evt.which
 			if (code === 27){
 				mediaModalClose()
