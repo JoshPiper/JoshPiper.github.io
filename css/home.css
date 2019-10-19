@@ -1772,7 +1772,7 @@ header {
 	width: 80%;
 	max-width: 700px;
 	background: none;
-	height: max-content;
+	height: 100%;
 }
 
 .modal-content img {

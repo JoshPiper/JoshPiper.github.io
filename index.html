@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Doctor Internet</title>
+		<link type="image/ico" href="img/logo.png" rel="icon">
 
 		<!-- Google Fonts / Bootstrap / FA -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -23,7 +24,7 @@
 		<meta property="og:url" content="https://doctor-internet.dev">
 		<meta property="og:title" content="Doctor Internet">
 		<meta property="og:description" content="Who am I, where did I come from and what do I do? All great questions. I'm Doctor Internet, find out more about me.">
-		<meta property="og:image" content="https://doctor-internet.dev/img/logo.webp">
+		<meta property="og:image" content="https://doctor-internet.dev/img/logo.png">
 		<meta name="theme-color" content="#1A1A3E">
 	</head>
 	<body>
@@ -39,15 +40,15 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    		<ul class="navbar-nav ml-auto">
 		    			<li class="nav-item dropdown active">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home <span class="sr-only">(current)</span></a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home <span class="sr-only">(current)</span></a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
 								<a class="dropdown-item" href="#info" onclick="event.preventDefault(); $(event.srcElement.hash)[0].scrollIntoView({behavior: 'smooth', block: 'start'})">Who am I?</a>
 								<a class="dropdown-item" href="#media" onclick="event.preventDefault(); $(event.srcElement.hash)[0].scrollIntoView({behavior: 'smooth', block: 'start'})">Media</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
 								<a class="dropdown-item" href="https://l2-plates.info">L² Plates</a>
 								<a class="dropdown-item" href="https://www.gmodstore.com/users/76561198031020569">GModStore</a>
 								<a class="dropdown-item" href="https://github.com/JoshPiper">GitHub</a>
@@ -210,48 +211,6 @@
 		<div id="back-to-top" style="display: none;"></div>
 	</body>
 
-	<script>
-		new Typed("#typed", {
-			stringsElement: "#typed-strings",
-			smartBackspace: true,
-			typeSpeed: 50,
-			backSpeed: 20,
-			backDelay: 1500,
-			showCursor: false,
-			onComplete: (self) => {
-				let sub = $("#typed")
-				let hdr = sub.parent().children().first()
-
-				sub.animate({
-					"font-size": "54px",
-					"margin-top": "-84px"
-				}, 2000)
-				hdr.fadeOut(2000, () => {
-					sub.css("margin-top", 0)
-				})
-			}
-		})
-	</script>
-	<script>
-		function mediaModal(src){
-			let box = $("#modal-media")
-			box.css("display", "block")
-			if (src !== undefined){
-				box.find("img").attr("src", src)
-			}
-		}
-		function mediaModalClose(){
-			$("#modal-media").css("display", "none")
-		}
-		$("a.lightbox").click(evt => {
-			evt.preventDefault()
-			mediaModal($(evt.currentTarget).attr("href"))
-		})
-		$(document).keyup(evt => {
-			let code = evt.keyCode ? evt.keyCode : evt.which
-			if (code === 27){
-				mediaModalClose()
-			}
-		})
-	</script>
+	<script src="js/typed.js"></script>
+	<script src="js/lightbox.js"></script>
 </html>
