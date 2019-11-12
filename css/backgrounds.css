@@ -17,3 +17,13 @@
 	background: #343a40;
 	background: linear-gradient(-30deg, #4a595f 50%, #343a40 50%);
 }
+
+.bg-lightalt {
+	background: #343a40;
+	background: linear-gradient(30deg, #f8f9fa 50%, #aeafb0 50%);
+}
+
+.bg-lightaltrev {
+	background: #343a40;
+	background: linear-gradient(-30deg, #aeafb0 50%, #f8f9fa 50%);
+}
