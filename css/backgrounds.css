@@ -5,12 +5,12 @@
 
 .bg-brandrev {
 	background: #1A1A3E;
-	background: linear-gradient(30deg, #28285D 50%, #1A1A3E 50%);
+	background: linear-gradient(-30deg, #28285D 50%, #1A1A3E 50%);
 }
 
 .bg-greyalt {
 	background: #343a40;
-	background: linear-gradient(-30deg, #343a40 50%, #4a595f 50%);
+	background: linear-gradient(30deg, #343a40 50%, #4a595f 50%);
 }
 
 .bg-greyaltrev {
