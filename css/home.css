@@ -1803,3 +1803,8 @@ header {
 	color: #FFF;
 	text-decoration: underline;
 }
+
+.bg-intercol {
+	background: #1A1A3E;
+	background: linear-gradient(30deg, #1A1A3E 50%, #28285D 50%);
+}
