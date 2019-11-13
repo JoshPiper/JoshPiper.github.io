@@ -1,0 +1,15 @@
+.card-top .card {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.card-mid .card {
+	border-radius: 0;
+	border-top: 0
+}
+
+.card-bottom .card {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top: 0
+}

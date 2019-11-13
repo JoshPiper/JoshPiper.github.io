@@ -38,16 +38,11 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    		<ul class="navbar-nav ml-auto">
-		    			<li class="nav-item dropdown active">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home <span class="sr-only">(current)</span></a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownHome">
-								<a class="dropdown-item" href="#info" onclick="event.preventDefault(); $(event.srcElement.hash)[0].scrollIntoView({behavior: 'smooth', block: 'start'})">Who am I?</a>
-								<a class="dropdown-item" href="#media" onclick="event.preventDefault(); $(event.srcElement.hash)[0].scrollIntoView({behavior: 'smooth', block: 'start'})">Media</a>
-							</div>
-						</li>
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="./">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
 								<a class="dropdown-item" href="https://l2-plates.info">L² Plates</a>
 								<a class="dropdown-item" href="https://www.gmodstore.com/users/76561198031020569">GModStore</a>
@@ -139,8 +134,8 @@
 				<div class="section-header text-center">
 					<h2 class="title">Media</h2>
 				</div>
-				<div class="row">
-					<div class="col-md-4 col-xs-6 work">
+				<div class="card-columns">
+					<div class="card work">
 						<img class="img-responsive" src="img/plates.webp" alt="The L² Plates system.">
 						<div class="overlay"></div>
 						<div class="work-content">
@@ -150,7 +145,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-6 work">
+					<div class="card work">
 						<img class="img-responsive" src="img/graph.png" alt="SVN Commit Graph">
 						<div class="overlay"></div>
 						<div class="work-content">
@@ -170,13 +165,63 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-6 work">
-						<img class="img-responsive" src="img/contributions.png" alt="My GitHub contributions graph for 2018.">
+					<div class="card work">
+						<img class="img-responsive" src="img/contributions.png" alt="GitHub contributions graph for 2018.">
 						<div class="overlay"></div>
 						<div class="work-content">
-							<h3>My GitHub contributions graph for 2018. Quite a few.</h3>
+							<h3>GitHub contributions.</h3>
 							<div class="work-link">
 								<a class="lightbox" href="img/contributions.png"><i class="fa fa-search"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card work">
+						<img class="img-responsive" src="img/data-report.png" alt="Data Report preface.">
+						<div class="overlay"></div>
+						<div class="work-content">
+							<h3>I like reports.</h3>
+							<div class="work-link">
+								<a class="lightbox" href="img/data-report.png"><i class="fa fa-search"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card work">
+						<img class="img-responsive" src="img/developers.png" alt="List of developers that I manage.">
+						<div class="overlay"></div>
+						<div class="work-content">
+							<h3>I also manage people.</h3>
+							<div class="work-link">
+								<a class="lightbox" href="img/developers.png"><i class="fa fa-search"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card work">
+						<img class="img-responsive" src="img/ple-notification.png" alt="Photon Lighting Engine notifications.">
+						<div class="overlay"></div>
+						<div class="work-content">
+							<h3>I work with git, and love Open Source.</h3>
+							<div class="work-link">
+								<a class="lightbox" href="img/ple-notification.png"><i class="fa fa-search"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card work">
+						<img class="img-responsive" src="img/rockford.jpg" alt="A Rockford PD vehicle..">
+						<div class="overlay"></div>
+						<div class="work-content">
+							<h3>Forrays into design and creative work.</h3>
+							<div class="work-link">
+								<a class="lightbox" href="img/ple-notification.png"><i class="fa fa-search"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card work">
+						<img class="img-responsive" src="img/reps.png" alt="The REP banners for Armacham Security, Armoured Sprinter and Casson Bus">
+						<div class="overlay"></div>
+						<div class="work-content">
+							<h3>Working within teams to deliver quality content.</h3>
+							<div class="work-link">
+								<a class="lightbox" href="img/ple-notification.png"><i class="fa fa-search"></i></a>
 							</div>
 						</div>
 					</div>
