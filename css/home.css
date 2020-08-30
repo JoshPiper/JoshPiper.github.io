@@ -148,6 +148,25 @@ ul, ol {
 	color: #FAFAFA
 }
 
+.bg-dark .card {
+	border: 1px rgba(0, 0, 0, 0.5) solid;
+	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bg-dark .card.work .card-body .card-text {
+	padding: 8px;
+	padding-top: 20px;
+	color: #1C1D21;
+}
+
+.card-deck {
+	margin-bottom: 20px;
+}
+
+.card-deck:last-child {
+	margin-bottom: 0;
+}
+
 .bg-img {
 	position: absolute;
 	left: 0;
