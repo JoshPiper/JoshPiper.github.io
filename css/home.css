@@ -134,9 +134,6 @@ ul, ol {
 	padding-bottom: 60px;
 }
 
-
-/* --  background section  -- */
-
 .bg-grey {
 	background-color: #FAFAFA;
 	border-top: 1px solid #EEE;
@@ -147,8 +144,9 @@ ul, ol {
 	background-color: #1C1D21;
 }
 
-
-/* --  background image section  -- */
+.bg-dark .title {
+	color: #FAFAFA
+}
 
 .bg-img {
 	position: absolute;
