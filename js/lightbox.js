@@ -5,13 +5,16 @@ function mediaModal(src){
 		box.find("img").attr("src", src)
 	}
 }
+
 function mediaModalClose(){
 	$("#modal-media").css("display", "none")
 }
+
 $("a.lightbox").click(evt => {
 	evt.preventDefault()
 	mediaModal($(evt.currentTarget).attr("href"))
 })
+
 $(document).keyup(evt => {
 	let code = evt.keyCode ? evt.keyCode : evt.which
 	if (code === 27){
