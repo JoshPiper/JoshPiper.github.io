@@ -1820,3 +1820,11 @@ header {
 	color: #FFF;
 	text-decoration: underline;
 }
+
+.card-role {
+	margin-bottom: 8px;
+}
+
+.card-role ul {
+	list-style: '- ';
+}
