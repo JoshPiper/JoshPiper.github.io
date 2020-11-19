@@ -11,9 +11,11 @@
 		</div>
 		{% endif %}
 		<div class="card-dates">
-			{% if page.started == null && page.date != null %}
-			<div><strong>Started:</strong> {{ page.date |  }}</div>
+			{% if page.started == null and page.date != null %}
+			<div><strong>Started:</strong> {{ page.date | date: "%B %Y" }}</div>
+			{% else if page.started != null %}
 			<div><strong>Started:</strong> {{ page.started }}</div>
+			{% endif %}
 			{% if page.ended == null %}
 			<div><strong>Ongoing</strong></div>
 			{% else %}
