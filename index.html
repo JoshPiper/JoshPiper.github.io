@@ -137,31 +137,9 @@
 				</div>
 
 				<div class="card-deck">
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">A-Levels</h4>
-							<div class="card-dates">
-								<div><strong>Started:</strong> September 2015</div>
-								<div><strong>Ended:</strong> June 2017</div>
-							</div>
-							<p class="card-text">
-								An Education in Computer Science, Mathematics, Sociology and Physics.
-							</p>
-						</div>
-					</div>
-
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">University</h4>
-							<div class="card-dates">
-								<div><strong>Started:</strong> September 2017</div>
-								<div><strong>Ended:</strong> June 2019</div>
-							</div>
-							<p class="card-text">
-								Computer Science, with forays into Business and Computing Law.
-							</p>
-						</div>
-					</div>
+					{% for education in site.education %}
+						{{ education.output }}
+					{% endfor %}
 				</div>
 
 				<div class="card-deck">
