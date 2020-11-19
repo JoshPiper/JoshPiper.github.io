@@ -1,0 +1,15 @@
+collections:
+  - education
+  - experience
+
+defaults:
+  -
+    scope:
+      path: "_education"
+    values:
+      layout: "card"
+  -
+    scope:
+      path: "_experience"
+    values:
+      layout: "card"
