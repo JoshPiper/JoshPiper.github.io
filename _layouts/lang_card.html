@@ -5,9 +5,9 @@
 	</div>
 	{% endif %}
 
-	{% if page.title or page.subtitle or page.body or (page.content and page.content.size > 0) %}
+	{% if page.title or page.subtitle or page.body or page.content %}
 	<div class="card-body">
-		{% if page.title %}<h3 class="card-title">{{ page.title }}}</h3>{% endif %}
+		{% if page.title %}<h3 class="card-title">{{ page.title }}</h3>{% endif %}
 		{% if page.subtitle %}<h5 class="card-subtitle text-muted mb-3">{{ page.subtitle }}</h5>{% endif %}
 
 		{% if page.body %}
@@ -17,4 +17,5 @@
 		{% endif %}
 		{% if page.content and page.content.size > 0 %}{{ page.content }}{% endif %}
 	</div>
+	{% endif %}
 </div>
