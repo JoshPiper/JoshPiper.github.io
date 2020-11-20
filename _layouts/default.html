@@ -19,9 +19,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
 		<!-- Page Based CSS -->
-		{% assign files = site.static_files | where: "extname", ".css" | where_exp: "file", "file.path contains '/css/'" | where_exp: "file", "page.name contains file.basename" %}
-		{% for file in files %}
-		<link type="text/css" rel="stylesheet" href="{{ file.path | relative_url }}">
+		{% for style in page.styles %}
+		<link type="text/css" rel="stylesheet" href="{{ style | relative_url }}">
 		{% endfor %}
 
 		{% seo %}
