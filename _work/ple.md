@@ -2,7 +2,7 @@
 date: 2020-1-1
 title: Photon Lighting Engine
 images: 
-  - src: ple-notification.png
+  - src: /img/ple-notification.png
     alt: The Photon Lighting Engine Github/Gitlab Notifiers.
 ---
 Though only a recent addition to the Photon Core team, I've put in large amounts of effort,

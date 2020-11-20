@@ -10,7 +10,7 @@
 			{{ paragraph }}
 			{% assign index = forloop.index | minus: 1 %}
 			{% if images[index] != null %}
-				{% assign src = "/img/" | append: images[index].src %}
+				{% assign src = images[index].src %}
 				{% assign alt = images[index].alt %}
 				{% include mediabox.image.html src=src alt=alt %}
 			{% endif %}
