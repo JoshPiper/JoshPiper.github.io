@@ -1,0 +1,6 @@
+<div id="modal-media" class="modal">
+	<span class="close cursor" onclick="mediaModalClose()">&times;</span>
+	<div class="modal-content">
+		<img src="{{ page.media.src | default: '/img/logo.png' | relative_url }}" alt="{{ page.media.alt | default: 'An unknown image' }}">
+	</div>
+</div>
