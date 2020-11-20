@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<span class="navbar-brand"><img src="{{ 'img/logo.png' | relative_url }}" alt="Doctor Internet's Logo"></span>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			{% for nav in site.data.nav %}
+				{% include nav.item.html nav=nav %}
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
