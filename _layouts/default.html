@@ -16,7 +16,7 @@
 
 		<!-- Random CSS / Type Library -->
 		<link type="text/css" rel="stylesheet" href="css/cards.css">
-		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		{% if page.typed %}<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>{% endif %}
 
 		<!-- Page Based CSS -->
 		{% for style in page.styles %}
