@@ -1,0 +1,55 @@
+{% assign row = -1 %}
+{% assign nextColumn = page.per_row | default: 3 | minus: 1 %}
+
+{% assign topRow = site.languages.size | divided_by: page.per_row %}
+{% assign shift = sites.languages.size | modulo: page.per_row %}
+{% assign shifted = 0 %}
+
+{% for language in site.languages %}
+	{% assign column = forloop.index | minus: 1 | modulo: page.per_row %}
+	{% capture shouldShift %}
+		{% if shift != 0 %}
+			0
+		{% else %}
+			{% assign lastRow = topRow | minus: 1 %}
+			{% if row != lastRow %}
+				0
+			{% elsif column != nextColumn %}
+				0
+			{% else %}
+				1
+			{% endif %}
+		{% endif %}
+	{% endcapture %}
+	{% assign shouldShift = shouldShift | to_integer %}
+
+	{% if shouldShift == 1 %}
+		</div>
+	{% endif %}
+
+	{% unless shifted == 1 %}
+		{% if column == 0 or shouldShift == 1 %}
+			{% assign row = row | plus: 1 %}
+			{% if row == 0 %}
+				<div class="card-group card-top">
+			{% elsif row == topRow %}
+				<div class="card-group card-bottom">
+			{% else %}
+				<div class="card-group card-mid">
+			{% endif %}
+		{% endif %}
+	{% endunless %}
+	{% assign shifted = 0 %}
+
+	{{ language.output }}
+
+	{% unless shouldShift == 1 %}
+		{% if column == nextColumn or forloop.index == site.languages.size %}
+			</div>
+		{% endif %}
+	{% endunless %}
+
+	{% if shouldShift == 1 %}
+		{% assign shifted = 1 %}
+	{% endif %}
+{% endfor %}
