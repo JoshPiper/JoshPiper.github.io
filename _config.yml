@@ -13,3 +13,22 @@ defaults:
       path: "_experience"
     values:
       layout: "card"
+
+title: Doctor Internet
+
+plugins:
+  - jekyll-seo-tag
+
+tagline: "An Internet Doctor"
+description: "Who am I, where did I come from and what do I do? All great questions. I'm Doctor Internet, find out more about me."
+logo: "/img/logo.png"
+social:
+  links:
+    - https://github.com/JoshPiper
+    - https://steamcommunity.com/id/DocInternet/
+
+lang: en_GB
+locale: en_GB
+
+twitter:
+  card: summary
