@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en-GB' }}">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>{{ site.title }}{% if page.title != null %} - {{ page.title }}{% endif %}</title>
+		<link type="image/png" href="{{ '/img/logo.png' | relative_url }}" rel="icon">
+
+		<!-- Google Fonts / Bootstrap / FA -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/4d5310fe43.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- Random CSS / Type Library -->
+<!--		<link type="text/css" rel="stylesheet" href="css/home.css">-->
+		<link type="text/css" rel="stylesheet" href="css/cards.css">
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+		<!-- Page Based CSS -->
+		{% assign files = site.static_files | where: "extname", ".css" | where_exp: "file", "file.path contains '/css/'" | where_exp: "file", "page.name contains file.basename" %}
+		{% for file in files %}
+		<link type="text/css" rel="stylesheet" href="{{ file.path | relative_url }}">
+		{% endfor %}
+
+		<!-- Twitter / Discord Embed Code -->
+		{% seo %}
+		<meta name="twitter:card" content="summary">
+		<meta property="og:url" content="https://doctor-internet.dev">
+		<meta property="og:title" content="Doctor Internet">
+		<meta property="og:description" content="Who am I, where did I come from and what do I do? All great questions. I'm Doctor Internet, find out more about me.">
+		<meta property="og:image" content="{{ '/img/logo.png' | absolute_url }}">
+		<meta name="theme-color" content="#1A1A3E">
+	</head>
+	<body>
+		{{ content }}
+	</body>
+</html>
