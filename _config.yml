@@ -2,7 +2,8 @@ collections:
   - languages
   - education
   - experience
-  - languages
+  - technologies
+
 
 defaults:
   -
@@ -18,6 +19,11 @@ defaults:
   -
     scope:
       path: "_languages"
+    values:
+      layout: "lang_card"
+  -
+    scope:
+      path: "_technologies"
     values:
       layout: "lang_card"
 
