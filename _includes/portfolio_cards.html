@@ -1,12 +1,13 @@
 {% assign row = -1 %}
-{% assign nextColumn = page.per_row | default: 3 | minus: 1 %}
+{% assign perRow = page.per_row | default: 3 %}
+{% assign nextColumn = perRow | minus: 1 %}
 
-{% assign topRow = site.languages.size | divided_by: page.per_row %}
-{% assign shift = sites.languages.size | modulo: page.per_row %}
+{% assign topRow = page_loop.size | divided_by: perRow %}
+{% assign shift = sites.languages.size | modulo: perRow %}
 {% assign shifted = 0 %}
 
-{% for language in site.languages %}
-	{% assign column = forloop.index | minus: 1 | modulo: page.per_row %}
+{% for language in page_loop %}
+	{% assign column = forloop.index | minus: 1 | modulo: perRow %}
 	{% capture shouldShift %}
 		{% if shift != 0 %}
 			0
@@ -44,7 +45,7 @@
 	{{ language.output }}
 
 	{% unless shouldShift == 1 %}
-		{% if column == nextColumn or forloop.index == site.languages.size %}
+		{% if column == nextColumn or forloop.index == page_loop.size %}
 			</div>
 		{% endif %}
 	{% endunless %}

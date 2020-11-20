@@ -16,7 +16,7 @@ per_row: 3
 			<h2 class="title white-text">#1, what languages?</h2>
 		</div>
 
-		{% include languages.html %}
+		{% include portfolio_cards.html page_loop=site.languages %}
 	</div>
 </div>
 
@@ -25,6 +25,8 @@ per_row: 3
 	<div class="section-header text-center mt-4">
 		<h2 class="title white-text">#2, what technologies?</h2>
 	</div>
+
+	{% include portfolio_cards.html page_loop=site.technologies %}
 
 	<div class="card-group card-top">
 		<div class="card">
