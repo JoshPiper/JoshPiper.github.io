@@ -38,4 +38,5 @@
 	</body>
 
 	{% if page.media %}<script src="{{ '/js/lightbox.js' | relative_url }}"></script>{% endif %}
+	{% for script in page.scripts %}<script src="{{ script | relative_url }}"></script>{% endfor %}
 </html>
