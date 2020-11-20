@@ -1,6 +1,7 @@
 {% assign row = -1 %}
 {% assign perRow = page.per_row | default: 3 %}
 {% assign nextColumn = perRow | minus: 1 %}
+{% assign page_loop = include.page_loop %}
 
 {% assign topRow = page_loop.size | divided_by: perRow %}
 {% assign shift = sites.languages.size | modulo: perRow %}
