@@ -1,6 +1,7 @@
 collections:
   - education
   - experience
+  - languages
 
 defaults:
   -
@@ -13,6 +14,11 @@ defaults:
       path: "_experience"
     values:
       layout: "card"
+  -
+    scope:
+      path: "_languages"
+    values:
+      layout: "lang_card"
 
 title: Doctor Internet
 
