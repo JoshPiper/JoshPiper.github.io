@@ -30,5 +30,12 @@
 		{% include nav.html %}
 
 		{{ content }}
+
+		{% include footer.html %}
+		{% if page.media %}{% include mediabox.html %}{% endif %}
+
+		<div id="back-to-top" style="display: none;"></div>
 	</body>
+
+	{% if page.media %}<script src="{{ '/js/lightbox.js' | relative_url }}"></script>{% endif %}
 </html>
