@@ -4,13 +4,13 @@
 {% assign page_loop = include.page_loop %}
 
 {% assign topRow = page_loop.size | divided_by: perRow %}
-{% assign shift = sites.languages.size | modulo: perRow %}
+{% assign shift = page_loop.size | modulo: perRow %}
 {% assign shifted = 0 %}
 
 {% for language in page_loop %}
 	{% assign column = forloop.index | minus: 1 | modulo: perRow %}
 	{% capture shouldShift %}
-		{% if shift != 0 %}
+		{% if shift != 1 %}
 			0
 		{% else %}
 			{% assign lastRow = topRow | minus: 1 %}
