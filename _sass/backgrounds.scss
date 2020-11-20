@@ -1,12 +1,11 @@
 @mixin bg-gradient ($left, $right, $rev: false){
 	@if $rev {
-		background: $left;
-		background: linear-gradient(30deg, $left 50%, $right 50%);
-	} @else {
 		background: $right;
 		background: linear-gradient(-30deg, $right 50%, $left 50%);
+	} @else {
+		background: $left;
+		background: linear-gradient(30deg, $left 50%, $right 50%);
 	}
-
 }
 
 @mixin make-gradient ($name, $left, $right){
