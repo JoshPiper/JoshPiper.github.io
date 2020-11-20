@@ -1,0 +1,21 @@
+<div class="card">
+	{% if page.header %}
+	<div class="card-header">
+		{{ page.header }}
+	</div>
+	{% endif %}
+
+	{% if page.title or page.subtitle or page.body or page.content %}
+	<div class="card-body">
+		{% if page.title %}<h3 class="card-title{% if page.subtitle == null %} mb-3{% endif %}">{{ page.title | smartify }}</h3>{% endif %}
+		{% if page.subtitle %}<h5 class="card-subtitle text-muted mb-3">{{ page.subtitle | smartify }}</h5>{% endif %}
+
+		{% if page.body %}
+		<ul class="card-text">
+			{% for row in page.body %}<li>{{ row | smartify }}</li>{% endfor %}
+		</ul>
+		{% endif %}
+		{% if page.content and page.content.size > 0 %}{{ page.content | smartify }}{% endif %}
+	</div>
+	{% endif %}
+</div>

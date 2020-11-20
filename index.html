@@ -1,450 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Doctor Internet</title>
-		<link type="image/ico" href="img/logo.png" rel="icon">
+---
+layout: "default"
+scripts:
+  - /js/typed.js
+styles:
+  - /css/home.css
+media:
+  src: /img/logo.png
+  alt: Doctor Internet's Logo
+typed: true
+title: "Home"
+---
+<header id="home">
+	<div class="bg-img">
+		<div class="overlay"></div>
+	</div>
 
-		<!-- Google Fonts / Bootstrap / FA -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://kit.fontawesome.com/4d5310fe43.js"></script>
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-		<!-- Random CSS / Type Library -->
-		<link type="text/css" rel="stylesheet" href="css/home.css">
-		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-
-		<!-- Twitter / Discord Embed Code -->
-		<meta name="twitter:card" content="summary">
-		<meta property="og:url" content="https://doctor-internet.dev">
-		<meta property="og:title" content="Doctor Internet">
-		<meta property="og:description" content="Who am I, where did I come from and what do I do? All great questions. I'm Doctor Internet, find out more about me.">
-		<meta property="og:image" content="https://doctor-internet.dev/img/logo.png">
-		<meta name="theme-color" content="#1A1A3E">
-	</head>
-	<body>
-		<header id="home">
-			<div class="bg-img">
-				<div class="overlay"></div>
-			</div>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<span class="navbar-brand"><img src="img/logo.png" alt="Doctor Internet's Logo"></span>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="./">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Content</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
-								<a class="dropdown-item" href="https://plates.limelightgaming.info">L² Plates</a>
-								<a class="dropdown-item" href="https://www.gmodstore.com/users/76561198031020569">GModStore</a>
-								<a class="dropdown-item" href="https://github.com/JoshPiper">GitHub</a>
-								<a class="dropdown-item" href="https://steamcommunity.com/id/DocInternet/myworkshopfiles/">Steam Workshop</a>
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="https://steamcommunity.com/profiles/76561198031020569">Steam</a></li>
-					</ul>
-				</div>
-			</nav>
-
-			<div class="home-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="home-content">
-								<h1 class="white-text">Doctor Internet</h1>
-								<h2 class="white-text" id="typed"></h2>
-								<div id="typed-strings">
-									<p>I am a Lua Developer.</p>
-									<p>I am a Node Developer.</p>
-									<p>I am a PHP Developer.</p>
-									<p>I am a JavaScript Developer.</p>
-									<p>I am a Python Developer.</p>
-									<p>I am a DevOps Engineer.</p>
-									<p>I am a Team Leader.</p>
-									<p>I am a Systems Administrator.</p>
-									<p>I am a Community Moderator.</p>
-									<p>I am a Data Protection Officer.</p>
-									<p>I am ^800 Doctor Internet^500.^500.^500.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<div id="info" class="section md-padding">
-			<div class="container">
-				<div class="section-header text-center">
-					<h2 class="title">Who am I?</h2>
-				</div>
-				<div class="row">
-					<div class="col-md-8">
-						<p>
-							That's a great question. I'm a guy who does things, mainly with computers, based out the UK.
-							I started programming in 2012, starting with the Lua scripting language for a Minecraft mod, <a href="http://www.computercraft.info/">"ComputerCraft"</a>.
-							From there, I moved into Python programming, taking both a GCSE and an A Level in Computer Science.
-						</p>
-						<p>
-							From there, I've worked in multiple fields; with my main outlet being a retained developer for <a href="https://limelightgaming.net">Limelight Gaming</a>
-							and a Content Creator at <a href="https://gmodstore.com">GModStore</a>, with volleys into other fields; including education and technical theatre.
-						</p>
-						<p>
-							I'm more than happy to discuss offers or requests for freelance development work (subject to my own availability); examples of my prior work can be found in the portfolio.
-						</p>
-						<p>
-							For any questions, or just a general chat, feel free to add me on <a href="https://steamcommunity.com/id/DocInternet">Steam</a> or Discord, at Doctor Internet#0069.
-						</p>
-					</div>
-					<div class="col-md-4">
-						<img src="img/logo.png" alt="Doctor Internet's Logo">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Multiple levels of professional qualifications.</p>
-						</div>
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Years of experience in multiple languages, development processes and technology stacks.</p>
-						</div>
-						<div class="feature">
-							<i class="fa fa-check"></i>
-							<p>Reliability through both technical expertise and familiarity with business requirements.</p>
+	<div class="home-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="home-content">
+						<h1 class="white-text">Doctor Internet</h1>
+						<h2 class="white-text" id="typed"></h2>
+						<div id="typed-strings">
+							<p>I am a Lua Developer.</p>
+							<p>I am a Node Developer.</p>
+							<p>I am a PHP Developer.</p>
+							<p>I am a JavaScript Developer.</p>
+							<p>I am a Python Developer.</p>
+							<p>I am a DevOps Engineer.</p>
+							<p>I am a Team Leader.</p>
+							<p>I am a Systems Administrator.</p>
+							<p>I am a Community Moderator.</p>
+							<p>I am a Data Protection Officer.</p>
+							<p>I am ^800 Doctor Internet^500.^500.^500.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+</header>
 
-		<div id="timeline" class="section md-padding bg-dark">
-			<div class="container">
-				<div class="section-header text-center">
-					<h2 class="title">My History.</h2>
-				</div>
-
-				<div class="card-deck">
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">A-Levels</h4>
-							<div class="card-dates">
-								<div><strong>Started:</strong> September 2015</div>
-								<div><strong>Ended:</strong> June 2017</div>
-							</div>
-							<p class="card-text">
-								An Education in Computer Science, Mathematics, Sociology and Physics.
-							</p>
-						</div>
-					</div>
-
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">University</h4>
-							<div class="card-dates">
-								<div><strong>Started:</strong> September 2017</div>
-								<div><strong>Ended:</strong> June 2019</div>
-							</div>
-							<p class="card-text">
-								Computer Science, with forays into Business and Computing Law.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="card-deck">
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">Limelight Gaming</h4>
-							<div class="card-role">
-								<ul>
-									<li>Developer</li>
-									<li>Database Administrator</li>
-									<li>Systems Administrator</li>
-									<li>Data Protection Officer</li>
-									<li>Business Advisor</li>
-									<li>Development Team Lead</li>
-								</ul>
-							</div>
-							<div class="card-dates">
-								<div><strong>Started:</strong> June 2017</div>
-								<div><strong>Ongoing</strong></div>
-							</div>
-							<p class="card-text">
-								From a Developer, through to Community Moderator, Systems Administrator, Data Protection Officer and Business Advisor, LL taught me how to conduct myself,
-								how to improve myself, how to build a product that I would use, and how to communicate that product to other partners.
-							</p>
-						</div>
-					</div>
-
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">Wolfpack Networks</h4>
-							<div class="card-role">
-								<ul>
-									<li>Systems Administrator</li>
-								</ul>
-							</div>
-							<div class="card-dates">
-								<div><strong>Started:</strong> July 2018</div>
-								<div><strong>Ended: </strong> October 2019</div>
-							</div>
-							<p class="card-text">
-								The first time I entered a small business at a management level, Wolfpack gave me a great opportunity to
-								ensure good processes were implemented from the get-go, with solid core infrastructure to back it up.
-							</p>
-						</div>
-					</div>
-
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">Team Reign</h4>
-							<div class="card-role">
-								<ul>
-									<li>Chief Technical Officer</li>
-								</ul>
-							</div>
-							<div class="card-dates">
-								<div><strong>Started:</strong> November 2019</div>
-								<div><strong>Ongoing</strong></div>
-							</div>
-							<p class="card-text">
-								Working with a friend, ensuring that their passion could be realised, to raise and develop a community.
-								Of course, this required a fair hand on the community, whilst ensuring that services were stable.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="card-deck">
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">Glorified Studios</h4>
-							<div class="card-role">
-								<ul>
-									<li>DevOps Engineer</li>
-									<li>Systems Administrator</li>
-									<li>Community Manager</li>
-								</ul>
-							</div>
-							<div class="card-dates">
-								<div><strong>Started:</strong> July 2020</div>
-								<div><strong>Ongoing</strong></div>
-							</div>
-							<p class="card-text">
-								Entering as a Developer, DevOps Engineer and System Administrator for this small development house, it
-								none-the-less provided me great opportunities. Not only did this allow me to continue developing my work with
-								CI/CD systems, it also provided me with a greater exposure to systems within Steam itself.
-								<br>
-								<br>
-								Furthermore, after working with the company, I was also offered (and accepted) the role of Community Manager.
-								Within this role, my duties include managing the moderation team, handling community concerns and feedback,
-								working with the brand's social media, and generally acting as a face of the company.
-							</p>
-						</div>
-					</div>
-
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">Photon Community (Formally Photon LE)</h4>
-							<div class="card-role">
-								<ul>
-									<li>Core Team (Development Lead)</li>
-								</ul>
-							</div>
-							<div class="card-dates">
-								<div><strong>Started:</strong> September 2019</div>
-								<div><strong>Ongoing</strong></div>
-							</div>
-							<p class="card-text">
-								My first dive into large-scale open source projects. Starting off as just a Developer, my role was to
-								produce a stable codebase, used by over half a million people. Moving on, I was promoted into the Core Team, where
-								my responsibility morphed into more general management, handling development, conflict between staff, and keeping the
-								team ticking over.
-							</p>
-						</div>
-					</div>
-
-					<div class="card work">
-						<div class="card-body">
-							<h4 class="card-title">999 Emergency</h4>
-							<div class="card-role">
-								<ul>
-									<li>Community Manager</li>
-								</ul>
-							</div>
-							<div class="card-dates">
-								<div><strong>Started:</strong> August 2020</div>
-								<div><strong>Ongoing</strong></div>
-							</div>
-							<p class="card-text">
-								Joining as 999 Emergency's Community Manager, my role is twofold. Managing the Community, and Managing the Team.
-								Managing the Community involves communicating with the project leads and the community, gathering feedback, distributing news and ensuring all sides stay happy.
-								Managing the Team involves assisting with promotions / demotions, handling inter- and intrateam communication,
-								assigning goals and shifting workload to ensure the team remains productive.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+<div id="info" class="section md-padding">
+	<div class="container">
+		<div class="section-header text-center">
+			<h2 class="title">Who am I?</h2>
 		</div>
-
-		<div id="media" class="section md-padding bg-grey">
-			<div class="container">
-				<div class="section-header text-center">
-					<h2 class="title">Media</h2>
-				</div>
-				<div class="card-columns">
-					<div class="card work">
-						<img class="img-responsive" src="img/plates.webp" alt="The L² Plates system.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>The L² Plates system.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/plates.webp"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/graph.png" alt="SVN Commit Graph">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>SVN commit graph, for the time within Limelight Gaming.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/graph.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/ranks.png" alt="A clean and well-written Discord.JS rank handler class.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>Part of a clean and well-written Discord.JS rank handler class. I also use dark theme.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/ranks.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/contributions.png" alt="GitHub contributions graph for 2018.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>GitHub contributions.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/contributions.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/data-report.png" alt="Data Report preface.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>I like reports.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/data-report.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/developers.png" alt="List of developers that I manage.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>I also manage people.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/developers.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/ple-notification.png" alt="Photon Lighting Engine notifications.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>I work with git, and love Open Source.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/ple-notification.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/rockford.jpg" alt="A Rockford PD vehicle..">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>Forrays into design and creative work.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/rockford.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/reps.png" alt="The REP banners for Armacham Security, Armoured Sprinter and Casson Bus">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>Working within teams to deliver quality content.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/reps.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/document-store.png" alt="The document store's document model, designed to make use of current best practices.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>The document store's document model, designed to make use of current best practices.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/document-store.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="card work">
-						<img class="img-responsive" src="img/guidelines-deploy.png" alt="The GitHub actions deployment log for the built documents.">
-						<div class="overlay"></div>
-						<div class="work-content">
-							<h3>The GitHub actions deployment log for the built documents.</h3>
-							<div class="work-link">
-								<a class="lightbox" href="img/guidelines-deploy.png"><i class="fa fa-search"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div class="row">
+			<div class="col-md-8">
+				<p>
+					That's a great question. I'm a guy who does things, mainly with computers, based out the UK.
+					I started programming in 2012, starting with the Lua scripting language for a Minecraft mod, <a href="http://www.computercraft.info/">"ComputerCraft"</a>.
+					From there, I moved into Python programming, taking both a GCSE and an A Level in Computer Science.
+				</p>
+				<p>
+					From there, I've worked in multiple fields; with my main outlet being a retained developer for <a href="https://limelightgaming.net">Limelight Gaming</a>
+					and a Content Creator at <a href="https://gmodstore.com">GModStore</a>, with volleys into other fields; including education and technical theatre.
+				</p>
+				<p>
+					I'm more than happy to discuss offers or requests for freelance development work (subject to my own availability); examples of my prior work can be found in the portfolio.
+				</p>
+				<p>
+					For any questions, or just a general chat, feel free to add me on <a href="https://steamcommunity.com/id/DocInternet">Steam</a> or Discord, at Doctor Internet#1024.
+				</p>
 			</div>
-		</div>
-
-		<footer id="footer" class="sm-padding bg-dark">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<ul class="footer-follow">
-							<li><a href="https://www.gmodstore.com/users/76561198031020569"><i class="fas fa-store-alt"></i></a></li>
-							<li><a href="https://steamcommunity.com/profiles/76561198031020569"><i class="fab fa-steam"></i></a></li>
-						</ul>
-						<div class="footer-copyright">
-							<p>Doctor Internet</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<div id="modal-media" class="modal">
-			<span class="close cursor" onclick="mediaModalClose()">&times;</span>
-			<div class="modal-content">
+			<div class="col-md-4">
 				<img src="img/logo.png" alt="Doctor Internet's Logo">
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="feature">
+					<i class="fa fa-check"></i>
+					<p>Multiple levels of professional qualifications.</p>
+				</div>
+				<div class="feature">
+					<i class="fa fa-check"></i>
+					<p>Years of experience in multiple languages, development processes and technology stacks.</p>
+				</div>
+				<div class="feature">
+					<i class="fa fa-check"></i>
+					<p>Reliability through both technical expertise and familiarity with business requirements.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-		<div id="back-to-top" style="display: none;"></div>
-	</body>
+<div id="timeline" class="section md-padding bg-dark">
+	<div class="container">
+		<div class="section-header text-center">
+			<h2 class="title">My History.</h2>
+		</div>
 
-	<script src="js/typed.js"></script>
-	<script src="js/lightbox.js"></script>
-</html>
+		<div class="card-deck">
+			{% for education in site.education %}
+				{{ education.output }}
+			{% endfor %}
+		</div>
+
+		<div class="card-deck">
+			{% for experience in site.experience %}
+				{{ experience.output }}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<div id="media" class="section md-padding bg-grey">
+	<div class="container">
+		<div class="section-header text-center">
+			<h2 class="title">Media</h2>
+		</div>
+		<div class="card-columns">
+			<div class="card work">
+				<img class="img-responsive" src="img/plates.webp" alt="The L² Plates system.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>The L² Plates system.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/plates.webp"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/graph.png" alt="SVN Commit Graph">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>SVN commit graph, for the time within Limelight Gaming.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/graph.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/ranks.png" alt="A clean and well-written Discord.JS rank handler class.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>Part of a clean and well-written Discord.JS rank handler class. I also use dark theme.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/ranks.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/contributions.png" alt="GitHub contributions graph for 2018.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>GitHub contributions.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/contributions.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/data-report.png" alt="Data Report preface.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>I like reports.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/data-report.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/developers.png" alt="List of developers that I manage.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>I also manage people.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/developers.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/ple-notification.png" alt="Photon Lighting Engine notifications.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>I work with git, and love Open Source.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/ple-notification.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/rockford.jpg" alt="A Rockford PD vehicle..">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>Forrays into design and creative work.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/rockford.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/reps.png" alt="The REP banners for Armacham Security, Armoured Sprinter and Casson Bus">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>Working within teams to deliver quality content.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/reps.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/document-store.png" alt="The document store's document model, designed to make use of current best practices.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>The document store's document model, designed to make use of current best practices.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/document-store.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card work">
+				<img class="img-responsive" src="img/guidelines-deploy.png" alt="The GitHub actions deployment log for the built documents.">
+				<div class="overlay"></div>
+				<div class="work-content">
+					<h3>The GitHub actions deployment log for the built documents.</h3>
+					<div class="work-link">
+						<a class="lightbox" href="img/guidelines-deploy.png"><i class="fa fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

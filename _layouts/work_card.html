@@ -1,0 +1,20 @@
+{% assign images = page.images %}
+{% assign paragraphs = page.content | newline_to_br | strip_newlines | split: "<br /><br />" %}
+<div class="card">
+	<div class="card-header text-center">
+		{% if page.title %}<h3 class="card-title{% if page.subtitle == null %} mb-0{% endif %}">{{ page.title | smartify }}</h3>{% endif %}
+		{% if page.subtitle %}<h5 class="card-subtitle text-muted mb-0">{{ page.subtitle | smartify }}</h5>{% endif %}
+	</div>
+
+	<div class="card-body">
+		{% for paragraph in paragraphs %}
+			{{ paragraph }}
+			{% assign index = forloop.index | minus: 1 %}
+			{% if images[index] != null and images[index] != 'skip' %}
+				{% assign src = images[index].src %}
+				{% assign alt = images[index].alt %}
+				{% include mediabox.image.html src=src alt=alt %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

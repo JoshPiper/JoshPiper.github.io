@@ -1,0 +1,57 @@
+{% assign row = -1 %}
+{% assign perRow = page.per_row | default: 3 %}
+{% assign nextColumn = perRow | minus: 1 %}
+{% assign page_loop = include.page_loop %}
+
+{% assign topRow = page_loop.size | divided_by: perRow %}
+{% assign shift = page_loop.size | modulo: perRow %}
+{% assign shifted = 0 %}
+
+{% for language in page_loop %}
+	{% assign column = forloop.index | minus: 1 | modulo: perRow %}
+	{% capture shouldShift %}
+		{% if shift != 1 %}
+			0
+		{% else %}
+			{% assign lastRow = topRow | minus: 1 %}
+			{% if row != lastRow %}
+				0
+			{% elsif column != nextColumn %}
+				0
+			{% else %}
+				1
+			{% endif %}
+		{% endif %}
+	{% endcapture %}
+	{% assign shouldShift = shouldShift | to_integer %}
+
+	{% if shouldShift == 1 %}
+		</div>
+	{% endif %}
+
+	{% unless shifted == 1 %}
+		{% if column == 0 or shouldShift == 1 %}
+			{% assign row = row | plus: 1 %}
+			{% if row == 0 %}
+				<div class="card-group card-top">
+			{% elsif row == topRow %}
+				<div class="card-group card-bottom">
+			{% else %}
+				<div class="card-group card-mid">
+			{% endif %}
+		{% endif %}
+	{% endunless %}
+	{% assign shifted = 0 %}
+
+	{{ language.output }}
+
+	{% unless shouldShift == 1 %}
+		{% if column == nextColumn or forloop.index == page_loop.size %}
+			</div>
+		{% endif %}
+	{% endunless %}
+
+	{% if shouldShift == 1 %}
+		{% assign shifted = 1 %}
+	{% endif %}
+{% endfor %}

@@ -1,0 +1,16 @@
+- title: Home
+  href: /
+- title: Portfolio
+  href: /portfolio.html
+- title: Content
+  items:
+    - title: L² Plates
+      href: https://plates.limelightgaming.info
+    - title: GitHub
+      href: https://github.com/JoshPiper
+    - title: GModStore
+      href: https://www.gmodstore.com/users/76561198031020569
+    - title: Steam Workshop
+      href: https://steamcommunity.com/id/DocInternet/myworkshopfiles/
+- title: Steam
+  href: https://steamcommunity.com/profiles/76561198031020569

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en-GB' }}">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link type="image/png" href="{{ '/img/logo.png' | relative_url }}" rel="icon">
+
+		<!-- Google Fonts / Bootstrap / FA -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/4d5310fe43.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- Random CSS / Type Library -->
+		<link type="text/css" rel="stylesheet" href="{{ '/css/cards.css' | relative_url }}">
+		{% if page.typed %}<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>{% endif %}
+
+		<!-- Page Based CSS -->
+		{% for style in page.styles %}
+		<link type="text/css" rel="stylesheet" href="{{ style | relative_url }}">
+		{% endfor %}
+
+		{% seo %}
+		<meta name="theme-color" content="#1A1A3E">
+	</head>
+	<body>
+		{% include nav.html %}
+
+		{{ content }}
+
+		{% include footer.html %}
+		{% if page.media %}{% include mediabox.html %}{% endif %}
+
+		<div id="back-to-top" style="display: none;"></div>
+	</body>
+
+	{% if page.media %}<script src="{{ '/js/lightbox.js' | relative_url }}"></script>{% endif %}
+	{% for script in page.scripts %}<script src="{{ script | relative_url }}"></script>{% endfor %}
+</html>

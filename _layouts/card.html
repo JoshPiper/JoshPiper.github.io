@@ -1,0 +1,29 @@
+<div class="card work">
+	<div class="card-body">
+		<h4 class="card-title">{{ page.title | smartify }}</h4>
+		{% if page.roles != null %}
+		<div class="card-role">
+			<ul>
+				{% for role in page.roles %}
+				<li>{{ role | smartify }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+		<div class="card-dates">
+			{% if page.started == null and page.date != null %}
+			<div><strong>Started:</strong> {{ page.date | date: "%B %Y" }}</div>
+			{% elsif page.started != null %}
+			<div><strong>Started:</strong> {{ page.started }}</div>
+			{% endif %}
+			{% if page.ended == null %}
+			<div><strong>Ongoing</strong></div>
+			{% else %}
+			<div><strong>Ended:</strong> {{ page.ended }}</div>
+			{% endif %}
+		</div>
+		<p class="card-text">
+			{{ content | smartify }}
+		</p>
+	</div>
+</div>

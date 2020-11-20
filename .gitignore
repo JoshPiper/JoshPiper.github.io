@@ -2,3 +2,5 @@
 .env
 .env*
 vendor/
+_site/
+.sass-cache/

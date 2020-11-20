@@ -1,0 +1,53 @@
+collections:
+  - languages
+  - education
+  - experience
+  - technologies
+  - work
+
+
+defaults:
+  -
+    scope:
+      path: "_education"
+    values:
+      layout: "card"
+  -
+    scope:
+      path: "_experience"
+    values:
+      layout: "card"
+  -
+    scope:
+      path: "_languages"
+    values:
+      layout: "lang_card"
+  -
+    scope:
+      path: "_technologies"
+    values:
+      layout: "lang_card"
+  -
+    scope:
+      path: "_work"
+    values:
+      layout: "work_card"
+
+title: Doctor Internet
+
+plugins:
+  - jekyll-seo-tag
+
+tagline: "An Internet Doctor"
+description: "Who am I, where did I come from and what do I do? All great questions. I'm Doctor Internet, find out more about me."
+logo: "/img/logo.png"
+social:
+  links:
+    - https://github.com/JoshPiper
+    - https://steamcommunity.com/id/DocInternet/
+
+lang: en_GB
+locale: en_GB
+
+twitter:
+  card: summary
