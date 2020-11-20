@@ -7,7 +7,7 @@
 
 	{% if page.title or page.subtitle or page.body or page.content %}
 	<div class="card-body">
-		{% if page.title %}<h3 class="card-title">{{ page.title | smartify }}</h3>{% endif %}
+		{% if page.title %}<h3 class="card-title{% if page.subtitle == null %} mb-3{% endif %}">{{ page.title | smartify }}</h3>{% endif %}
 		{% if page.subtitle %}<h5 class="card-subtitle text-muted mb-3">{{ page.subtitle | smartify }}</h5>{% endif %}
 
 		{% if page.body %}
