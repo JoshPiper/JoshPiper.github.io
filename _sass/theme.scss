@@ -580,7 +580,7 @@ header {
 }
 
 #home {
-	height: 100vh;
+	height: calc(100vh - 57px);
 }
 
 #home .home-wrapper {
