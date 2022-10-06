@@ -1,7 +1,7 @@
 ---
 date: 2020-1-10
 header: Technology
-title: REST APIs
+title: Webhooks
 subtitle: '"tube schoomper" <cite>-Discord</cite>'
 ---
 Webhooks are just REST APIs that push data, really. Just like with regular REST APIs,
