@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en-GB' }}">
+	<!--suppress HtmlRequiredTitleElement, GrazieInspection -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--suppress HtmlUnknownTarget -->
 		<link type="image/png" href="{{ '/img/logo.png' | relative_url }}" rel="icon">
 
 		<!-- Google Fonts / Bootstrap / FA -->
@@ -20,6 +22,7 @@
 
 		<!-- Page Based CSS -->
 		{% for style in page.styles %}
+		<!--suppress HtmlUnknownTarget -->
 		<link type="text/css" rel="stylesheet" href="{{ style | relative_url }}">
 		{% endfor %}
 
