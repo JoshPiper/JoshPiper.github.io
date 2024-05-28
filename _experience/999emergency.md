@@ -3,6 +3,7 @@ title: 999 Emergency
 roles:
   - Community Manager
 date: 2020-8-1
+ended: February 2023
 ---
 Joining as 999 Emergency's Community Manager, my role is twofold.
 Managing the Community, and Managing the Team.
