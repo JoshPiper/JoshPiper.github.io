@@ -4,6 +4,7 @@
 @import "theme.scss";
 @import "backgrounds.scss";
 @import "card-grid.scss";
+@import "bootstrap5-compat.scss";
 
 .card-deck:not(:last-child) {
 	margin-bottom: 0px;
