@@ -33,12 +33,6 @@
 }
 
 /* Responsive behavior for card-columns */
-@media (max-width: 1199.98px) {
-  .card-columns {
-    column-count: 3;
-  }
-}
-
 @media (max-width: 991.98px) {
   .card-columns {
     column-count: 2;
