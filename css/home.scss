@@ -10,3 +10,7 @@
 .card-deck:not(:last-child) {
 	margin-bottom: 0px;
 }
+
+.navbar {
+	--bs-navbar-padding-x: 0.5rem;
+}
